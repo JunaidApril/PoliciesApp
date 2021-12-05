@@ -1,12 +1,8 @@
-# PoliciesApp
-Crud app for policies
-
-
-# PoliciesApplication
+# Policies Application
 Crud application for policies
 
 
-##How to run
+###How to run
 There are two options
 
 ### Option 1
