@@ -1,0 +1,16 @@
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.deps.json
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.runtimeconfig.json
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.runtimeconfig.dev.json
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.dll
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.pdb
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.dll
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.pdb
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.csproj.AssemblyReference.cache
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.AssemblyInfoInputs.cache
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.AssemblyInfo.cs
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.csproj.CopyComplete
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.dll
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.pdb
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Infrastructure\obj\Debug\netcoreapp3.1\Wtw.Policies.Infrastructure.genruntimeconfig.cache

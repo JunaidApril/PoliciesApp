@@ -1,0 +1,8 @@
+<div>
+  <div *ngIf="policies?.length > 0">
+    <div *ngFor="let policy of policies">
+      <span>{{ policy.PolicyHolderDto.name }}</span>
+      <span>{{ policy.PolicyHolderDto.age }}</span>
+    </div>
+  </div>
+</div>

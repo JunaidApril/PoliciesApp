@@ -1,0 +1,10 @@
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.deps.json
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.dll
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.pdb
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.csproj.AssemblyReference.cache
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.AssemblyInfoInputs.cache
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.AssemblyInfo.cs
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.csproj.CoreCompileInputs.cache
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.dll
+C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.pdb
