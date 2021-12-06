@@ -59,9 +59,21 @@ namespace Wtw.Policies.Infrastructure.Repositories
 
         public async Task<Guid> UpdateAsync(Policy policy)
         {
-            try
+
+             //Check if policy exists
+            var policyUpdate = await FindByIdAsync(policy.UUID);
+
+            if (policyUpdate == null)
             {
-                _context.Policies.Update(policy);
+                _logger.LogWarning("Cannot update policy {policyHolderUUID} entity does not exist", policy.UUID);
+                throw new BusinessException();
+            }
+
+            try 
+            { 
+
+                policyUpdate.PolicyHolderUUID = policy.PolicyHolderUUID;
+
                 await _context.SaveChangesAsync();
 
                 return policy.UUID;

@@ -149,20 +149,7 @@ namespace Wtw.Policies.Test
             var response = await _policyService.UpdatePolicyAsync(policyDto);
 
             //Assert
-            Assert.True(response);
-        }
-
-        [Fact]
-        public async Task RemovePolicyAsync_Test()
-        {
-            //Arrange
-            _policiesRepoMock.Setup(x => x.DeleteAsync(_policyEF.UUID));
-
-            //Act
-            var result = await _policyService.RemovePolicyAsync(_policyEF.UUID);
-
-            //Assert
-            Assert.True(result);
+            Assert.Equal(response, policyUpdate.UUID);
         }
 
         [Fact]

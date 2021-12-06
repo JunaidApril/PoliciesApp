@@ -81,7 +81,7 @@ namespace Wtw.Policies.Application.BFF.Services
             {
                 var policy = _mapper.Map<Policy>(policyDto);
 
-                var holder = _policyHolderRepository.UpdateAsync(policy.PolicyHolder);
+                var holder = await _policyHolderRepository.UpdateAsync(policy.PolicyHolder);
 
                 var response = await _policiesRepository.UpdateAsync(policy);
 

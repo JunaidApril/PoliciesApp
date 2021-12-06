@@ -65,12 +65,25 @@ namespace Wtw.Policies.Infrastructure.Repositories
             }
         }
 
-        public PolicyHolder UpdateAsync(PolicyHolder policyHolder)
+        public async Task<PolicyHolder> UpdateAsync(PolicyHolder policyHolder)
         {
-            try
+            //Check if policy holder exists
+            var policyHolderUpdate = await FindByIdAsync(policyHolder.UUID);
+
+            if(policyHolderUpdate == null)
             {
-                _context.PolicyHolders.Update(policyHolder);               
-                _context.SaveChangesAsync();
+                _logger.LogWarning("Cannot update policy holder {policyHolderUUID} entity does not exist", policyHolder.UUID);
+                throw new BusinessException();
+            }
+
+            try 
+            { 
+                //update model
+                policyHolderUpdate.Name = policyHolder.Name;
+                policyHolderUpdate.Age = policyHolder.Age;
+                policyHolderUpdate.Gender = policyHolder.Gender;
+
+                await _context.SaveChangesAsync();
 
                 return policyHolder;
             }
