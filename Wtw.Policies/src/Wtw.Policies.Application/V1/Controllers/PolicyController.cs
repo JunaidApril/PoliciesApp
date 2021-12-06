@@ -31,7 +31,7 @@ namespace Wtw.Policies.Application.BFF.Controllers
         /// <param name="policyApplicationDto"></param>
         /// <returns>Guid</returns>
         [HttpPost("Create")]
-        [ProducesResponseType(typeof(Guid), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
         public async Task<IActionResult> Create([FromBody] ApplicationDto policyApplicationDto)
         {
             var result = await _policyService.CreatePolicyAsync(policyApplicationDto);
@@ -44,11 +44,11 @@ namespace Wtw.Policies.Application.BFF.Controllers
         /// <param name="policyUUID"></param>
         /// <returns>bool</returns>
         [HttpPut("Remove")]
-        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(void), StatusCodes.Status200OK)]
         public async Task<IActionResult> Remove(Guid policyUUID)
         {
-            var result = await  _policyService.RemovePolicyAsync(policyUUID);
-            return Ok(result);
+            await _policyService.RemovePolicyAsync(policyUUID);
+            return Ok();
         }
 
         /// <summary>
@@ -56,9 +56,9 @@ namespace Wtw.Policies.Application.BFF.Controllers
         /// </summary>
         /// <param name="policyDto"></param>
         /// <returns>bool</returns>
-        [HttpPut("Update")]
-        [ProducesResponseType(typeof(bool), StatusCodes.Status200OK)]
-        public async Task<IActionResult> Update(PolicyDto policyDto)
+        [HttpPost("Update")]
+        [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
+        public async Task<IActionResult> Update([FromBody] PolicyDto policyDto)
         {
             var result = await _policyService.UpdatePolicyAsync(policyDto);
             return Ok(result);

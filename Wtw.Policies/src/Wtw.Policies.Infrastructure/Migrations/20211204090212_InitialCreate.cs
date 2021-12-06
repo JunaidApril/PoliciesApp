@@ -31,8 +31,7 @@ namespace Wtw.Policies.Infrastructure.Migrations
                 columns: table => new
                 {
                     UUID = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "newsequentialid()"),
-                    PolicyHolder_UUID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PolicyHolderUUID = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    PolicyHolderUUID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedBy_UUID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedBy_UUID = table.Column<Guid>(type: "uniqueidentifier", nullable: false),

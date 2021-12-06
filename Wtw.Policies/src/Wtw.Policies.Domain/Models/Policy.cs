@@ -7,7 +7,7 @@ namespace Wtw.Policies.Domain.Models
     public class Policy : Entity
     {
         [Required]
-        public Guid PolicyHolder_UUID { get; set; }
+        public Guid PolicyHolderUUID { get; set; }
 
         public PolicyHolder PolicyHolder { get; set; }
     }

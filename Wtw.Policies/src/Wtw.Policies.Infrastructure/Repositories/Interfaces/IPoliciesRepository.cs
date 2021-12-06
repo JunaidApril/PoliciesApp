@@ -11,7 +11,7 @@ namespace Wtw.Policies.Infrastructure.Repositories.Interfaces
         public Task<Policy> FindByIdAsync(Guid policyUUID);
         public Task<IEnumerable<Policy>> GetAllAsync();
         public Task<Guid> CreateAsync(Policy policyHolder);
-        public Task UpdateAsync(Policy policyHolder);
+        public Task<Guid> UpdateAsync(Policy policyHolder);
         public Task DeleteAsync(Guid policyUUID);
     }
 }

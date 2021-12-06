@@ -22,12 +22,14 @@ namespace Wtw.Policies.Infrastructure.Repositories
             _logger = logger;
         }
 
-        public Task<Policy> FindByIdAsync(Guid policyUUID)
+        public async Task<Policy> FindByIdAsync(Guid policyUUID)
         {
             try
             {
-                return _context.Policies
+                var policy = await _context.Policies
                     .SingleOrDefaultAsync(policy => policy.UUID == policyUUID);
+
+                return policy;
             }
             catch(Exception ex)
             {
@@ -55,12 +57,14 @@ namespace Wtw.Policies.Infrastructure.Repositories
             }
         }
 
-        public Task UpdateAsync(Policy policy)
+        public async Task<Guid> UpdateAsync(Policy policy)
         {
             try
             {
                 _context.Policies.Update(policy);
-                return _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
+
+                return policy.UUID;
             }
             catch(Exception ex)
             {

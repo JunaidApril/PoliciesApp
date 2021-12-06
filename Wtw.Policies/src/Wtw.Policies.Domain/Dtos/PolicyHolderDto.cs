@@ -14,7 +14,5 @@ namespace Wtw.Policies.Domain.Dtos
         public int Age { get; set; }
 
         public GenderType Gender { get; set; }
-
-        public virtual IEnumerable<PolicyDto> Policies { get; set; }
     }
 }

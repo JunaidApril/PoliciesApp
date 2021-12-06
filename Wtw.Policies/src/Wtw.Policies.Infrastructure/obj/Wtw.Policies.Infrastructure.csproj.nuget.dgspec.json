@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj": {}
+    "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj": {
+    "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj",
         "projectName": "Wtw.Policies.Domain",
-        "projectPath": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj",
+        "projectPath": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj",
         "packagesPath": "C:\\Users\\junaid.april\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Domain\\obj\\",
+        "outputPath": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj": {
+    "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj",
         "projectName": "Wtw.Policies.Infrastructure",
-        "projectPath": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\Wtw.Policies.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\junaid.april\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -96,8 +96,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj": {
-                "projectPath": "C:\\Projects\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj"
+              "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj": {
+                "projectPath": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\src\\Wtw.Policies.Domain\\Wtw.Policies.Domain.csproj"
               }
             }
           }

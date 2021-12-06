@@ -26,8 +26,10 @@ namespace Wtw.Policies.Infrastructure.Repositories
         {
             try
             {
-                return _context.PolicyHolders
+                var policyHolder = _context.PolicyHolders
                     .SingleOrDefaultAsync(policyHolder => policyHolder.UUID == policyHolderUUID);
+
+                return policyHolder;
             }
             catch(Exception ex)
             {
@@ -63,12 +65,14 @@ namespace Wtw.Policies.Infrastructure.Repositories
             }
         }
 
-        public Task UpdateAsync(PolicyHolder policyHolder)
+        public PolicyHolder UpdateAsync(PolicyHolder policyHolder)
         {
             try
             {
-                _context.PolicyHolders.Update(policyHolder);
-                return _context.SaveChangesAsync();
+                _context.PolicyHolders.Update(policyHolder);               
+                _context.SaveChangesAsync();
+
+                return policyHolder;
             }
             catch (Exception ex)
             {

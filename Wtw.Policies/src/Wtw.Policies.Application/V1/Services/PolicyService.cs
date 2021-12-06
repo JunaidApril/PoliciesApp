@@ -41,6 +41,8 @@ namespace Wtw.Policies.Application.BFF.Services
 
                 var policyUuid = await _policiesRepository.CreateAsync(policy);
 
+                _logger.LogInformation(String.Format("Policy created for {0}", policyUuid));
+
                 return policyUuid;
             }
             catch(Exception ex)
@@ -50,7 +52,7 @@ namespace Wtw.Policies.Application.BFF.Services
             }
         }
 
-        public async Task<bool> RemovePolicyAsync(Guid policyUUID)
+        public async Task RemovePolicyAsync(Guid policyUUID)
         {
             if(policyUUID == Guid.Empty)
             {
@@ -60,16 +62,16 @@ namespace Wtw.Policies.Application.BFF.Services
             try
             {
                 await _policiesRepository.DeleteAsync(policyUUID);
-                return true;
+                _logger.LogInformation(String.Format("Policy remove for {0}", policyUUID));
             }
             catch(Exception ex)
             {
-                _logger.LogWarning("Failed to remove policy: RemovePolicyAsync");
+                _logger.LogWarning("Failed to removed policy: RemovePolicyAsync");
                 throw new BusinessException("Unable to remove policy.");
             }
         }
 
-        public async Task<bool> UpdatePolicyAsync(PolicyDto policyDto)
+        public async Task<Guid> UpdatePolicyAsync(PolicyDto policyDto)
         {
             //Validate input
             var appDto = _mapper.Map<ApplicationDto>(policyDto.PolicyHolder);
@@ -79,11 +81,13 @@ namespace Wtw.Policies.Application.BFF.Services
             {
                 var policy = _mapper.Map<Policy>(policyDto);
 
-                await _policyHolderRepository.UpdateAsync(policy.PolicyHolder);
+                var holder = _policyHolderRepository.UpdateAsync(policy.PolicyHolder);
 
-                await _policiesRepository.UpdateAsync(policy);
+                var response = await _policiesRepository.UpdateAsync(policy);
 
-                return true;
+                _logger.LogInformation(String.Format("Policy updated for {0}", policyDto.Policy_UUID));
+
+                return response;
             }
             catch (Exception ex)
             {
@@ -100,7 +104,7 @@ namespace Wtw.Policies.Application.BFF.Services
 
                 foreach (var policy in response)
                 {
-                    policy.PolicyHolder = await _policyHolderRepository.FindByIdAsync(policy.PolicyHolder_UUID);
+                    policy.PolicyHolder = await _policyHolderRepository.FindByIdAsync(policy.PolicyHolderUUID);
                 }
 
                 var policies = _mapper.Map<IEnumerable<PolicyDto>>(response);
@@ -119,20 +123,18 @@ namespace Wtw.Policies.Application.BFF.Services
             {
                 HandleValidation("Unable to retrieve policy. Please provide a policy uuid");
             }
-            try
-            {
-                var response = await _policiesRepository.FindByIdAsync(policyUUID);
 
-                response.PolicyHolder = await _policyHolderRepository.FindByIdAsync(response.PolicyHolder_UUID);
+            var response = await _policiesRepository.FindByIdAsync(policyUUID);
 
-                var policy = _mapper.Map<PolicyDto>(response);
-                return policy;
-            }
-            catch(Exception ex)
+            if (response == null)
             {
-                _logger.LogWarning("Failed retrieving policy: GetPolicyAsync");
-                throw new BusinessException("Unable to retreive policy. Please try again later");
+                HandleValidation(String.Format("Could not find policy for uuid: {0}", policyUUID));
             }
+
+            response.PolicyHolder = await _policyHolderRepository.FindByIdAsync(response.PolicyHolderUUID);
+
+            var policy = _mapper.Map<PolicyDto>(response);
+            return policy;
         }
 
         public void ValidatePolicyHolderInfo(ApplicationDto policyApplicationDto)

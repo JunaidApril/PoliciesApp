@@ -13,12 +13,12 @@ namespace Wtw.Policies.Infrastructure.Data.EntityTypeConfigurations
             base.Configure(builder);
 
             builder
-              .Property(policy => policy.PolicyHolder_UUID)
+              .Property(policy => policy.PolicyHolderUUID)
               .IsRequired();
 
             builder.HasOne(policy => policy.PolicyHolder)
                 .WithMany(holder => holder.Policies)
-                .HasForeignKey(policy => policy.PolicyHolder_UUID);
+                .HasForeignKey(policy => policy.PolicyHolderUUID);
         }
     }
 }

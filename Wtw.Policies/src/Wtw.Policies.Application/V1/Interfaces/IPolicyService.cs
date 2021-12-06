@@ -9,9 +9,9 @@ namespace Wtw.Policies.Application.BFF.Interfaces
     {
         Task<Guid> CreatePolicyAsync(ApplicationDto policyApplicationDto);
 
-        Task<bool> RemovePolicyAsync(Guid policyUUID);
+        Task RemovePolicyAsync(Guid policyUUID);
 
-        Task<bool> UpdatePolicyAsync(PolicyDto policyDto);
+        Task<Guid> UpdatePolicyAsync(PolicyDto policyDto);
 
         Task<IEnumerable<PolicyDto>> GetPoliciesAsync();
 

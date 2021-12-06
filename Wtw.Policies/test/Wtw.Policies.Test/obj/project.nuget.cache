@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vZkXSIfai//7xswkZ3XADfbXCVdmPZl67lcdNP/VCBrk4/Ka8wM1eQ4rAiHS1PNpwUmU6NGgv5vOgsOrck7zIQ==",
+  "dgSpecHash": "tspad19VlwEcdyuw1ji9WZMAv65Q3PkBLfN3zQzU7im/KB36Vt7HBt7d2GcoyuZdLDLlrErJE5dfsXWSU7YdGA==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Wtw.Policies\\test\\Wtw.Policies.Test\\Wtw.Policies.Test.csproj",
+  "projectFilePath": "C:\\Users\\junaid.april\\Documents\\GitHub\\PoliciesApp\\Wtw.Policies\\test\\Wtw.Policies.Test\\Wtw.Policies.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\junaid.april\\.nuget\\packages\\autofac\\6.0.0\\autofac.6.0.0.nupkg.sha512",
     "C:\\Users\\junaid.april\\.nuget\\packages\\autofac.extras.moq\\6.1.0\\autofac.extras.moq.6.1.0.nupkg.sha512",

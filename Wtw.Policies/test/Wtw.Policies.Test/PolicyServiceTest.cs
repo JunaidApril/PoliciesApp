@@ -49,7 +49,7 @@ namespace Wtw.Policies.Test
             //Store mock record in policies repo
             var policyEf = new Policy();
             policyEf.UUID = policyUuid;
-            policyEf.PolicyHolder_UUID = policyHolderEf.UUID;
+            policyEf.PolicyHolderUUID = policyHolderEf.UUID;
             policyEf.PolicyHolder = policyHolderEf;
 
             _policyEF = policyEf;

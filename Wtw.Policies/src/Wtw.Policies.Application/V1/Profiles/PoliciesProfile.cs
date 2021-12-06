@@ -10,7 +10,11 @@ namespace Wtw.Policies.Application.BFF.Profiles
         {
             CreateMap<ApplicationDto, PolicyHolder>();
             CreateMap<PolicyHolderDto, PolicyHolder>();
-            CreateMap<PolicyDto, Policy>();
+            CreateMap<PolicyDto, Policy>()
+                .ForMember(
+                    dest => dest.UUID,
+                    opts => opts.MapFrom(src => src.Policy_UUID)
+                );
             CreateMap<PolicyHolderDto, ApplicationDto>();
             CreateMap<PolicyHolder, PolicyHolderDto>()
                 .ForMember(
@@ -22,10 +26,7 @@ namespace Wtw.Policies.Application.BFF.Profiles
                     opts => opts.MapFrom(src => src.Age))
                 .ForMember(
                     dest => dest.Gender,
-                    opts => opts.MapFrom(src => src.Gender))
-                .ForMember(
-                    dest => dest.Policies,
-                    opts => opts.MapFrom(src => src.Policies));
+                    opts => opts.MapFrom(src => src.Gender));
 
             CreateMap<Policy, PolicyDto>()
                 .ForMember(
