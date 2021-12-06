@@ -114,19 +114,19 @@ namespace Wtw.Policies.Application
 
                 spa.Options.SourcePath = "ClientApp";
 
-                if (!env.IsDevelopment())
+                if (env.IsDevelopment())
                 {
-                    return;
+                    spa.UseAngularCliServer(npmScript: "start");
                 }
 
-                if (Environment.GetEnvironmentVariables().Contains("ApiOnly"))
-                {
-                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
-                }
-                else
-                {
-                    spa.UseAngularCliServer("start");
-                }
+                //if (Environment.GetEnvironmentVariables().Contains("ApiOnly"))
+                //{
+                //    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
+                //}
+                //else
+                //{
+                //    spa.UseAngularCliServer("start");
+                //}
             });           
         }
     }

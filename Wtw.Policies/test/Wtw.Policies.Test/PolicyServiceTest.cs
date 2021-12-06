@@ -92,6 +92,31 @@ namespace Wtw.Policies.Test
         }
 
         [Fact]
+        public async Task CreatePolicyAsync_Test()
+        {
+            //arrange
+            _policyHolderRepoMock.Setup(x => x.CreateAsync(It.IsAny<PolicyHolder>()))
+                .ReturnsAsync(_policyHolderEf);
+
+            _policiesRepoMock.Setup(x => x.CreateAsync(It.IsAny<Policy>()))
+                .ReturnsAsync(_policyEF.UUID);
+
+            //Act
+            var applicantDto = new ApplicationDto
+            {
+                Name = _policyHolderEf.Name,
+                Age = _policyHolderEf.Age,
+                GenderType = _policyHolderEf.Gender
+            };
+
+            var response = await _policyService.CreatePolicyAsync(applicantDto);
+
+            //Assert
+            Assert.NotEqual(response, Guid.Empty);
+            Assert.Equal(response, _policyEF.UUID);
+        }
+
+        [Fact]
         public async Task GetPolicyAsync_Test()
         {
             //Arrange
@@ -122,20 +147,24 @@ namespace Wtw.Policies.Test
             policyHolderUpdate.Age = 23;
             policyHolderUpdate.Gender = GenderType.Female;
 
-            _policyHolderRepoMock.Setup(x => x.UpdateAsync(policyHolderUpdate));
-
             //Store mock record in policies repo for update
             var policyUpdate = new Policy();
             policyUpdate.UUID = Guid.NewGuid();
             policyUpdate.PolicyHolder = policyHolderUpdate;
 
-            _policiesRepoMock.Setup(x => x.UpdateAsync(policyUpdate));
+
+            _policyHolderRepoMock.Setup(x => x.UpdateAsync(It.IsAny<PolicyHolder>()))
+                .ReturnsAsync(policyHolderUpdate);
+
+            _policiesRepoMock.Setup(x => x.UpdateAsync(It.IsAny<Policy>())).
+                ReturnsAsync(policyUpdate.UUID);
 
             //Act
+            //Update data
             var policyHolderDto = new PolicyHolderDto
             {
                 Uuid = policyHolderUpdate.UUID,
-                Name = policyHolderUpdate.Name,
+                Name = "Nemanja",
                 Age = policyHolderUpdate.Age,
                 Gender = policyHolderUpdate.Gender
             };

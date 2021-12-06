@@ -11,6 +11,7 @@ C:\Projects\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Pol
 C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.deps.json
 C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.dll
 C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\bin\Debug\netcoreapp3.1\Wtw.Policies.Domain.pdb
+C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.csproj.AssemblyReference.cache
 C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.AssemblyInfoInputs.cache
 C:\Users\junaid.april\Documents\GitHub\PoliciesApp\Wtw.Policies\src\Wtw.Policies.Domain\obj\Debug\netcoreapp3.1\Wtw.Policies.Domain.AssemblyInfo.cs

@@ -14,10 +14,12 @@ export class PolicyHttpService {
   constructor(private http: HttpClient) { }
 
   createPolicy(applicationDto: ApplicationDto): Observable<string> {
+    debugger;
     return this.http.post<string>(`${this.url}/Create`, applicationDto);
   }
 
   getAll(): Observable<PolicyDto[]> {
+    debugger;
     return this.http.get<PolicyDto[]>(`${this.url}/GetAll`);
   }
 
